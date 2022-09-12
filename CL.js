@@ -21,15 +21,15 @@ const gameDay2_afternoon = ["Rangers x Napoli",
 const day = new Date()
 
 const gamesOfTheDay = () => {
-    if (day.getUTCDate() === 13 && day.getUTCHours() <= 18 && day.getUTCMinutes(day.getUTCHours() <= 18) <= 15) {
+    if (day.getUTCDate() === 13 && day.getUTCHours() <= 18 && day.getUTCMinutes() <= 15 || day.getUTCHours() < 18 && day.getUTCMinutes() >= 15) {
         console.log(gameDay1, gameDay1_afternoon)
-    } else if (day.getUTCDate() === 13 && day.getUTCHours() >= 20 && day.getUTCMinutes() > 30) {
+    } else if (day.getUTCDate() === 13 && day.getUTCHours() >= 21 || day.getUTCHours() === 20 && day.getUTCMinutes() >= 30) {
         console.log("No games left today") 
     } else if (day.getUTCDate() === 13 && day.getUTCHours() >= 18 && day.getUTCMinutes() > 15) {
         console.log(gameDay1_afternoon)
-    } else if (day.getUTCDate() === 14 && day.getUTCHours() <= 18 && day.getUTCMinutes(day.getUTCHours() <= 18) <= 15) {
+    } else if (day.getUTCDate() === 14 && day.getUTCHours() <= 18 && day.getUTCMinutes() <= 15 || day.getUTCHours() < 18 && day.getUTCMinutes() >= 15) {
         console.log(gameDay2, gameDay2_afternoon)
-    } else if (day.getUTCDate() === 14 && day.getUTCHours() >= 20 && day.getUTCMinutes() > 30) {
+    } else if (day.getUTCDate() === 14 && day.getUTCHours() >= 21 || day.getUTCHours() === 20 && day.getUTCMinutes() >= 30) {
         console.log("No games left today") 
     } else if (day.getUTCDate() === 14 && day.getUTCHours() >= 18 && day.getUTCMinutes() > 15) {
         console.log(gameDay2_afternoon)
